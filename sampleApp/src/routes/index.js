@@ -18,6 +18,7 @@ export default {
   children: [
     require('./home').default,
     require('./todo').default,
+    require('./sample1').default,
 
     // // place new routes before...
     // require('./content').default,

@@ -19,7 +19,8 @@ function Home({ news }) {
       <div className={s.root}>
         <div className={s.container}>
           <h1 className={s.title}>Todo</h1>
-          <Link className={s.link} to="/todo">Click This</Link>
+          <Link className={s.link} to="/todo">Click This</Link><br/>
+          <Link className={s.link} to="/sample1">Sample App1</Link>
         </div>
       </div>
     </Layout>
