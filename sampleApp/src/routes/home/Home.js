@@ -18,9 +18,10 @@ function Home({ news }) {
     <Layout>
       <div className={s.root}>
         <div className={s.container}>
-          <h1 className={s.title}>Todo</h1>
+          <h1 className={s.title}>Todo Sample</h1>
           <Link className={s.link} to="/todo">Click This</Link><br/>
-          <Link className={s.link} to="/sample1">Sample App1</Link>
+          <h1 className={s.title}>Employee Sample</h1>
+          <Link className={s.link} to="/sample1">Sample App Link</Link>
         </div>
       </div>
     </Layout>

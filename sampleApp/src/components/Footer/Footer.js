@@ -18,7 +18,7 @@ function Footer() {
       <div className={s.container}>
         <a
           className={s.link}
-          href="https://seungshins.gitbooks.io/jsf-book/content"
+          href="https://www.gitbook.com/book/iotjsf/iot-jsf/details"
         >Development Document</a>
       </div>
     </div>
