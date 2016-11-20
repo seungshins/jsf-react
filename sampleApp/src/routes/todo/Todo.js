@@ -29,4 +29,14 @@ Todo.propTypes = {
   title: PropTypes.string.isRequired,
 };
 
+var Todo = React.createClass({
+    render: function() {
+      return (
+        <div className="Todo">
+          Hello, world! I am a Todo.
+        </div>
+      );
+    }
+  });
+
 export default withStyles(s)(Todo);

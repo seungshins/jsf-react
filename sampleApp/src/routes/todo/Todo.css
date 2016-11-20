@@ -17,5 +17,30 @@
 .container {
   margin: 0 auto;
   padding: 0 0 40px;
-  max-width: var(--max-content-width);
+}
+
+#content{
+  border: 1px solid red;
+  padding: 5px;
+  margin: 5px;
+  max-width: 500px;
+}
+.commentBox{
+  border: 1px solid black;
+  margin: 5px;
+}
+.commentList{
+  border: 1px solid blue;
+  padding: 5px;
+  margin: 5px;
+}
+.commentForm{
+  border: 1px  solid red;
+  padding: 5px;
+  margin: 5px;
+}
+.comment{
+  border: 1px solid black;
+  padding: 5px;
+  margin: 5px;
 }
