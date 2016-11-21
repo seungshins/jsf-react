@@ -17,30 +17,60 @@
 .container {
   margin: 0 auto;
   padding: 0 0 40px;
+  max-width: var(--max-content-width);
 }
 
-#content{
-  border: 1px solid red;
-  padding: 5px;
-  margin: 5px;
-  max-width: 500px;
+* {
+    padding:0;
+    margin:0;
 }
-.commentBox{
-  border: 1px solid black;
-  margin: 5px;
+
+html{
+    font:14px normal Arial, sans-serif;
+    color:#626771;
+    background-color:#fff;
 }
-.commentList{
-  border: 1px solid blue;
-  padding: 5px;
-  margin: 5px;
+
+body{
+    padding:20px;
+    text-align: center;
 }
-.commentForm{
-  border: 1px  solid red;
-  padding: 5px;
-  margin: 5px;
+
+h1{
+    font-size: 18px;
+    margin-bottom: 30px;
+    padding-top: 20px;
 }
-.comment{
-  border: 1px solid black;
-  padding: 5px;
-  margin: 5px;
+
+div.picture{
+    display: inline-block;
+    margin: 5px;
+    cursor:pointer;
+    position: relative;
+}
+
+div.picture.favorite:after{
+    content: '❤';
+    position: absolute;
+    font-size: 80px;
+    line-height: 200px;
+    color: #FF224D;
+    width: 100%;
+    text-align: center;
+    left: 0;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.5);
+    font-weight: bold;
+}
+
+.pictures, .favorites{
+    white-space: nowrap;
+    overflow-y: auto;
+    margin-bottom: 20px;
+    height: 230px;
+    background-color: #F3F3F3;
+}
+
+.pictures p, .favorites p {
+    padding-top: 100px;
+    font-size: 13px;
 }

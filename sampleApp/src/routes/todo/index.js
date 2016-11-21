@@ -19,7 +19,7 @@ export default {
   action() {
     return {
       title,
-      component: <Todo title={title} />,
+      component: <Todo title={title} />
     };
   },
 
