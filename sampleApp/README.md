@@ -14,3 +14,10 @@ follow the below rules
 
 4. Add developer's sample application pages  to ./src/routes
 
+5. Use save option when you add node modules
+
+```
+$ npm install <node_module> --save
+ (ex. npm install react-bootstrap --save)
+```
+
