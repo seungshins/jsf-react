@@ -27,7 +27,7 @@ import passport from './core/passport';
 import models from './data/models';
 import schema from './data/schema';
 import routes from './routes';
-//import assets from './assets'; // eslint-disable-line import/no-unresolved
+import assets from './assets'; // eslint-disable-line import/no-unresolved
 import { port, auth } from './config';
 
 const app = express();
@@ -111,8 +111,8 @@ app.get('*', async (req, res, next) => {
     const data = { ...route };
     data.children = ReactDOM.renderToString(<App context={context}>{route.component}</App>);
     data.style = [...css].join('');
-    // data.script = assets.main.js;
-    // data.chunk = assets[route.chunk] && assets[route.chunk].js;
+    data.script = assets.main.js;
+    data.chunk = assets[route.chunk] && assets[route.chunk].js;
     const html = ReactDOM.renderToStaticMarkup(<Html {...data} />);
 
     res.status(route.status || 200);
