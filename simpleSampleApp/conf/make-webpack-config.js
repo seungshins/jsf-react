@@ -26,10 +26,10 @@ module.exports = function(options) {
   }
 
   return {
-    entry: options.production ? './app/index.js' : [
+    entry: options.production ? './src/index.js' : [
       'webpack-dev-server/client?http://localhost:8080',
       'webpack/hot/only-dev-server',
-      './app/index.js',
+      './src/index.js',
     ],
     debug: !options.production,
     devtool: options.devtool,

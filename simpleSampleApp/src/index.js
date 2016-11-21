@@ -1,6 +1,6 @@
 // IMPORTANT: This needs to be first (before any other components)
 // to get around CSS order randomness in webpack.
-import './css/base';
+import './styles/base';
 
 // Some ES6+ features require the babel polyfill
 // More info here: https://babeljs.io/docs/usage/polyfill/
@@ -9,6 +9,6 @@ import './css/base';
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Application from './components/Application';
+import App from './App';
 
-ReactDOM.render(<Application />, document.getElementById('app'));
+ReactDOM.render(<App />, document.getElementById('app'));

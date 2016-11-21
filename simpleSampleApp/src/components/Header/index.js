@@ -14,17 +14,18 @@ import styles from './style';
  */
 import logoURL from './images/react-logo.svg';
 
-const Header = () => {
-  return <header className={styles.main}>
-    <img className={styles.logo} src={logoURL} height="125"/>
-
-    <div className={styles.wrap}>
-      <h1 className={styles.title}>IoT Jsf</h1>
-      <h2 className={styles.tagline}>2016 study JavaScript framework part</h2>
-    </div>
-  </header>;
+class Header extends React.Component {
+	render = () => {
+		return (
+			<header className={styles.main}>
+				<img className={styles.logo} src={logoURL} height="125"/>
+				<div className={styles.wrap}>
+					<h1 className={styles.title}>IoT Jsf</h1>
+					<h2 className={styles.tagline}>2016 study JavaScript framework part</h2>
+				</div>
+			</header>
+		)
+	};
 };
-
-Header.displayName = 'Header';
 
 export default Header;

@@ -2,9 +2,9 @@
   "name": "iofjsf",
   "version": "1.0.0",
   "description": "My React starter kit. Webpack, Babel, Sass, React 0.14 and more.",
-  "main": "app/index.js",
+  "main": "src/index.js",
   "scripts": {
-    "lint:js": "eslint ./app ./conf ./build-gh-pages.js",
+    "lint:js": "eslint ./src ./conf ./build-gh-pages.js",
     "karma": "cross-env NODE_ENV=test karma start",
     "test": "npm run karma conf/karma.conf.js -- --single-run",
     "test:watch": "npm run karma conf/karma.conf.js",
