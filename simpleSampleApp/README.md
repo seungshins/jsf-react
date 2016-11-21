@@ -9,4 +9,4 @@ $ npm start
 
 ### Sample App
 
-Simple React Sample
+Simple React Sample ( https://seungshins.github.io/jsf-react/ )
