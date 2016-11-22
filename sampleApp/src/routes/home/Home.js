@@ -22,6 +22,8 @@ function Home({ news }) {
           <Link className={s.link} to="/todo">App Link</Link><br/>
           <h1 className={s.title}>Employee Management</h1>
           <Link className={s.link} to="/sample1">App Link</Link>
+          <h1 className={s.title}>Trello UI</h1>
+          <Link className={s.link} to="/sangjoonchoi">App Link</Link>
         </div>
       </div>
     </Layout>

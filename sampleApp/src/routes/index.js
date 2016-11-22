@@ -19,6 +19,7 @@ export default {
     require('./home').default,
     require('./todo').default,
     require('./sample1').default,
+    require('./sangjoonchoi').default,
 
     // // place new routes before...
     // require('./content').default,

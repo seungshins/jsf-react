@@ -1,0 +1,213 @@
+@import '../../components/variables.css';
+
+#dashBoard {
+  width: 100%;
+}
+
+#header {
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 27px;
+  background-color: #3955ff;
+}
+
+#contentArea {
+  background-color: #66bdff;
+}
+
+#titleArea {
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 25px;
+  margin-right: 20px;
+}
+
+.listBoard {
+  min-height: 500px;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 0 20px;
+}
+
+#listAddArea {
+  height: 32px;
+  padding: 7px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.listEntity {
+  display: inline-block;
+  width: 260px;
+  background-color: #b4e4f7;
+  border-radius: 5px;
+  margin-right: 10px;
+  vertical-align: top;
+  user-select: none;
+}
+
+.listHeaderArea {
+  height: 35px;
+  padding: 5px 10px 0 10px;
+}
+
+.listHeaderArea .listTitle {
+  font-weight: bold;
+  font-size: 20px;
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+.listHeaderArea .deleteIcon {
+  content: url('/cross.png');
+  height: 12px;
+  width: 12px;
+  float: right;
+  margin-top: 3px;
+  padding: 2px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.listHeaderArea .deleteIcon:hover {
+  background-color: #85cad8;
+  border-radius: 3px;
+}
+
+.listContentArea {
+  padding: 0 8px;
+}
+
+.listButtonArea {
+  height: 35px;
+  padding: 0 12px;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 35px;
+  color: #4b4b4b;
+  display: block;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  position: relative;
+  text-decoration: none;
+  -webkit-user-select: none;
+  transition: 0.3s;
+}
+
+.listButtonArea:hover {
+  background-color: #a7c9de;
+  color: #000000;
+  text-decoration: underline;
+  font-weight: 300;
+  border-radius: 0 0 5px 5px;
+}
+
+.addMemoForm {
+  margin: 0 8px;
+}
+
+.textAreaWrap {
+  overflow: hidden;
+  border-radius: 3px;
+}
+
+.textAreaWrap textarea {
+  width: 100%;
+  height: 60px;
+  font-size: 14px;
+  border-width: 0;
+  border-bottom: 1px solid #ccc;
+  border-radius: 3px;
+  overflow: auto;
+  outline: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  resize: none;
+}
+
+.addMemoFormButtonDiv {
+  margin-bottom: 10px;
+}
+
+.addMemoFormButtonDiv button {
+  margin-right: 5px;
+  font-size: 14px;
+}
+
+.memo {
+  background-color: white;
+  margin-bottom: 5px;
+  padding: 5px 10px;
+  border-bottom: 1px solid #ccc;
+  border-radius: 3px;
+  transition: 0.3s;
+}
+
+.memo:hover {
+  background-color: #cccccc;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.memoContents {
+  display: block;
+  word-break: break-all;
+  white-space: initial;
+  margin-bottom: 2px;
+}
+
+.memoUpdateTime {
+  display: block;
+  text-align: right;
+  font-size: 12px;
+  color: #4b4b4b;
+}
+
+.shade {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#editPopup {
+  height: 150px;
+  width: 250px;
+  border-radius: 4px;
+  background-color: #EDEFF0;
+  position: absolute;
+  top: 30%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  padding: 5px 13px;
+}
+
+#editTextArea {
+  height: 90px;
+}
+
+#confirmDeletePopup {
+  height: 70px;
+  width: 270px;
+  border-radius: 4px;
+  background-color: #EDEFF0;
+  position: absolute;
+  top: 30%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  padding: 5px 13px;
+}
