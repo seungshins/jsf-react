@@ -25,8 +25,10 @@ $ npm install <node_module> --save
 
 1. Todo
 
+
 2. Employee Management
 
+
 3. Trello UI
-   * Add / Delete lists
-   * Add / Edit / Delete memos in each list
+    * Add / Delete lists
+    * Add / Edit / Delete memos in each list
