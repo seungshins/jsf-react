@@ -6,7 +6,7 @@ import s from './TrelloUI.css';
 const TrelloUI = React.createClass({
   getInitialState() {
     return {
-      title: 'Trello UI',
+      title: this.props.title,
       boardName: 'Sample Board',
       editPopup: this.editMemo,
       openMemoEditor: false,
