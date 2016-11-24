@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html ng-app='coinback'>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+<!-- jQuery -->
+<script type="text/javascript" src="/jquery/jquery-3.1.1.min.js"></script>
+
+<!-- Bootstrap core CSS -->
+<link href="/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css" rel="stylesheet">
+
+<!-- Bootstrap core JS -->
+<script type="text/javascript" src="/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="/angular/angular.min.js"></script>
+<script type="text/javascript" src="/angular/angular-resource/angular-resource.min.js"></script>
+<script type="text/javascript" src="/angular/angular-route/angular-route.min.js"></script>
+<script src="controllers/user.js"></script>
+
+<title>coinback</title>
+</head>
+<body ng-controller='userHistory'>
+<div ng-include="'common_view/user_header.html'"></div>
+<div class="container">
+<br><br>
+<section id="bar">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <form>
+						<div class="panel-heading"><h2>My 거래내역</h2></div>
+						<div class="table-responsive">
+						<table class="table">
+							<colgroup>
+								<col width="10%">
+								<col width="10%">
+								<col width="15%">
+								<col width="15%">
+								<col width="15%">
+							</colgroup>
+							<tr>
+								<td><strong>결제일시</strong></td>
+								<td><strong>업체</strong></td>
+								<td><strong>적립금액</strong></td>
+							</tr>
+							<tr ng-repeat="history in historys">
+							<td>{{ history.payDt | date:'medium' }}</td>
+							<td>{{ history.orgName }}</td>
+							<td><span class="{{ checkUseYn(history.useYn) }}">{{ history.amount }}</span></td>
+							</tr>
+						</table>
+						</div>
+					</form:form>
+                </div>
+            </div>
+    </section>
+</div>
+</body>
+</html>

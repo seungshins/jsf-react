@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html ng-app='coinback'>
+<head>
+
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- jQuery -->
+	<script type="text/javascript" src="/jquery/jquery-3.1.1.min.js"></script>
+
+	<!-- Bootstrap core CSS -->
+	<link href="/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css" rel="stylesheet">
+	
+	<!-- Bootstrap core JS -->
+	<script type="text/javascript" src="/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+	
+	<script type="text/javascript" src="/angular/angular.min.js"></script>
+	<script type="text/javascript" src="/angular/angular-resource/angular-resource.min.js"></script>
+	<script type="text/javascript" src="/angular/angular-route/angular-route.min.js"></script>
+	<script src="controllers/pos.js"></script>
+
+	<title>{{ title }}</title>
+</head>
+<body ng-controller="posController">
+<div ng-include="'common_view/pos_header.html'"></div>
+<div class="container">
+<br><br><br>
+<section id="bar">
+            <div class="row" id="history-form">
+            	<div class="col-xs-6 col-xs-offset-3 col-lg-4 col-lg-offset-4 
+	                            col-md-4 col-md-offset-4">
+                    <h2>POS</h2>
+                    <hr>
+                    <form>
+	                    <div class="form-group">
+	                    	<label>바코드 번호</label>
+	                        <input type="text" name="barcodeNum" class="form-control" ng-model="formData.barcodeNum">
+	                        <label>받은 금액</label>
+		                    <input type="text" name="getMoney" class="form-control" ng-model="formData.getMoney">
+		                    <label>결제 금액</label>
+		                    <input type="text" name="payAmount" class="form-control" ng-model="formData.payAmount">
+							<button id="pay-button" type="submit" class="btn btn-info" ng-click="updateUser(formData.barcodeNum)">결제</button>
+	                    </div>
+                    </form>
+                </div>
+            </div>
+	    </section>
+</div>
+</body>
+</html>
