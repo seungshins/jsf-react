@@ -21,3 +21,14 @@ $ npm install <node_module> --save
  (ex. npm install react-bootstrap --save)
 ```
 
+### Sample Apps
+
+1. Todo
+
+
+2. Employee Management
+
+
+3. Trello UI
+    * Add / Delete lists
+    * Add / Edit / Delete memos in each list
