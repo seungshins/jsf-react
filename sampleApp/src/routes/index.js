@@ -20,7 +20,8 @@ export default {
     require('./todo').default,
     require('./sample1').default,
     require('./sangjoonchoi').default,
-
+    require('./kim').default,
+    
     // // place new routes before...
     // require('./content').default,
     require('./notFound').default,
