@@ -18,7 +18,7 @@ function Home({ news }) {
     <Layout>
       <div className={s.root}>
         <div className={s.container}>
-          <h1 className={s.title}>Todo</h1>
+          <h1 className={s.title}>Exam</h1>
           <Link className={s.link} to="/todo">App Link</Link><br/>
           <h1 className={s.title}>Employee Management</h1>
           <Link className={s.link} to="/sample1">App Link</Link>
