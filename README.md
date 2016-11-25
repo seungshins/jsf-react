@@ -5,11 +5,12 @@
 Download node and node-gyp global (node >= 5, node-gyp and prerequisites)
 cd sampleApp & run the sampleApp project
 
+### (Important!) Use Run Build Option bellow command
 
 ```
 $ cd sampleApp
 $ npm install
-$ npm start
+$ npm run build -- --release && node build/server.js
 ```
 
 ### Sample App 

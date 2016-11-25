@@ -10,52 +10,20 @@
 import React, { PropTypes } from 'react';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import Layout from '../../components/Layout';
-import s from './Todo.css';
+import style from './Todo.css';
 import BootStrap from 'react-bootstrap';
 
 function Todo({ title }) {
   return (
     <Layout>
-      <div className={s.root}>
-        <div className={s.container}>
+      <div className={style.root}>
+        <div className={style.container}>
           <App11></App11>
         </div>
       </div>
     </Layout>
   );
 }
-
-// var serverData = [
-//   { id: 1, name: 'kss' },
-//   { id: 2, name: 'kss1' },
-//   { id: 3, name: 'kss2' },
-// ];
-
-// var Todo = React.createClass({
-//   getInitialState() {
-//     return {
-//       message: 'loading...',
-//       data: serverData
-//     };
-//   },
-
-//   componentWillMount() {
-//     this.setState({message: 'welcome!', data: serverData});
-//   },
-
-//   render() {
-//     if(this.state.data) {
-//       var list = this.state.data.map(obj => <li key={obj.id}>{obj.id}:{obj.name}</li>);
-//     }
-//     return (
-//       <div>
-//         <p>server-side rendering sample</p>
-//         <p>{this.state.message}</p>
-//         <ul>{list}</ul>
-//       </div>
-//     );
-//   }
-// });
 
 var services = [
     { name: 'JAVA', price: 80 },
@@ -67,12 +35,31 @@ var services = [
 var App11 = React.createClass({
 
     getInitialState: function(){
-        return { total: 0, items: services };
+        return { total: 0, items: services, avg: 0, count: 0 };
     },
 
-    addTotal: function( price ){
-        this.setState( { total: this.state.total + price } );
+    addTotal: function( price, count ){
+        var curtotal = this.state.total + price;
+        var curcount = this.state.count + count;
+        
+        this.setState( { total: curtotal } );
+        this.setState( { count: curcount } );
+        
+        if( curcount > 0) {
+            this.setState( { avg: curtotal / curcount } );
+        } else {
+            this.setState( { avg: 0 } );
+        }
     },
+    
+    /*addCount: function( count ){
+        this.setState( { count: this.state.count + count } );
+        this.setState( { avg: (this.state.count + count) } );
+    },
+    
+    addAvg: function( avg ) {
+        this.setState( { avg: avg} );
+    },*/
 
     render: function() {
 
@@ -83,16 +70,17 @@ var App11 = React.createClass({
             // Create a new Service component for each item in the items array.
             // Notice that I pass the self.addTotal function to the component.
 
-            return <ServiceLayer name={ser.name} price={ser.price} active={ser.active} addTotal={self.addTotal} key={idx}/>;
+            return <ServiceLayer name={ser.name} price={ser.price} active={ser.active} addTotal={self.addTotal} addCount={self.addCount} addAvg={self.addAvg} key={idx}/>;
         });
 
         return <div>
                     <h1>Exam</h1>
                     
-                    <div id="services">
+                    <div className={style.services}>
                         {services}
 
-                        <p id="total">Total <b>{this.state.total.toFixed(2)}점</b></p>
+                        <p className={style.total}>Total <b>{this.state.total.toFixed(2)}점</b></p>
+                        <p className={style.avg}>Average <b>{this.state.avg.toFixed(2)}점</b></p>
 
                     </div>
 
@@ -111,17 +99,39 @@ var ServiceLayer = React.createClass({
     clickHandler: function (){
 
         var active = !this.state.active;
-          console.log("activ",active);
 
         this.setState({ active: active });
         
         // Notify the Todo, by calling its addTotal method
-        this.props.addTotal( active ? this.props.price : -this.props.price );
+        // this.props.addTotal( active ? this.props.price : -this.props.price );
+        
+        var currentTotal = 0;
+        var currentCount = 0;
+        
+        if(active) {
+            this.props.addTotal(this.props.price, 1);
+            // this.props.addCount(1);
+            // currentTotal = this.props.total + this.props.price;
+            // currentCount = this.props.count + 1 ;
+        } else {
+            this.props.addTotal(-this.props.price, -1);
+            // this.props.addCount(-1);
+            // currentTotal = this.props.total - this.props.price;
+            // currentCount = this.props.count - 1 ;
+        }
+        
+        // console.log("this.props.count",  this.props.count);
+        
+        // if(currentCount > 0) {
+        //     this.props.addAvg(currentTotal/currentCount);
+        // } else {
+        //     this.props.addAvg(0);
+        // }
 
     },
 
     render: function(){
-        return  <p className={ this.state.active ? 'active' : '' } onClick={this.clickHandler}>
+        return  <p className={ this.state.active ? style.active : '' } onClick={(event)=>this.clickHandler()}>
                     {this.props.name} <b>{this.props.price.toFixed(2)}점</b>
                 </p>;
 
@@ -133,4 +143,4 @@ Todo.propTypes = {
   title: PropTypes.string.isRequired,
 };
 
-export default withStyles(s)(Todo);
+export default withStyles(style)(Todo);

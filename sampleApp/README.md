@@ -23,7 +23,7 @@ $ npm install <node_module> --save
 
 ### Sample Apps
 
-1. Todo
+1. Exam
 
 
 2. Employee Management
