@@ -24,6 +24,8 @@ function Home({ news }) {
           <Link className={s.link} to="/sample1">App Link</Link>
           <h1 className={s.title}>Trello UI</h1>
           <Link className={s.link} to="/sangjoonchoi">App Link</Link>
+          <h1 className={s.title}>Assignment</h1>
+          <Link className={s.link} to="/kim">App Link</Link>
         </div>
       </div>
     </Layout>
