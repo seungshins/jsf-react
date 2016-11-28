@@ -26,6 +26,8 @@ function Home({ news }) {
           <Link className={s.link} to="/sangjoonchoi">App Link</Link>
           <h1 className={s.title}>Assignment</h1>
           <Link className={s.link} to="/kim">App Link</Link>
+          <h1 className={s.title}>SamplePage</h1>
+          <a href="https://seungshins.github.io/jsf-react/">App Link</a>
         </div>
       </div>
     </Layout>
